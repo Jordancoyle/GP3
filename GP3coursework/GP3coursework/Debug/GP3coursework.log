@@ -1,14 +1,41 @@
-﻿Build started 29/03/2017 19:24:57.
+﻿Build started 04/04/2017 13:39:27.
      1>Project "C:\Users\Jordan Coyle\Documents\GitHub\GP3\GP3coursework\GP3coursework\GP3coursework.vcxproj" on node 2 (Build target(s)).
-     1>Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Jordan Coyle\Documents\GitHub\GP3\GP3coursework\Debug\GP3coursework.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Jordan Coyle\Documents\GitHub\GP3\GP3coursework\Debug\GP3coursework.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Jordan Coyle\Documents\GitHub\GP3\GP3coursework\Debug\GP3coursework.lib" /MACHINE:X86 Libraries\DevIL.lib
-         Libraries\freeglut.lib
-         Libraries\ftgl.lib
-         Libraries\ILU.lib
-     1>LINK : warning LNK4001: no object files specified; libraries used
-     1>LINK : fatal error LNK1561: entry point must be defined
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp
+         Main.cpp
+     1>c:\users\jordan coyle\documents\github\gp3\gp3coursework\gp3coursework\main.cpp(77): warning C4244: 'argument' : conversion from 'const int' to 'GLfloat', possible loss of data
+     1>c:\users\jordan coyle\documents\github\gp3\gp3coursework\gp3coursework\main.cpp(86): warning C4244: 'argument' : conversion from 'const int' to 'GLfloat', possible loss of data
+     1>c:\users\jordan coyle\documents\github\gp3\gp3coursework\gp3coursework\main.cpp(94): warning C4305: 'initializing' : truncation from 'double' to 'GLfloat'
+     1>c:\users\jordan coyle\documents\github\gp3\gp3coursework\gp3coursework\main.cpp(114): warning C4305: 'argument' : truncation from 'int' to 'ALboolean'
+     1>c:\users\jordan coyle\documents\github\gp3\gp3coursework\gp3coursework\main.cpp(114): warning C4309: 'argument' : truncation of constant value
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Jordan Coyle\Documents\GitHub\GP3\GP3coursework\Debug\GP3coursework.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Jordan Coyle\Documents\GitHub\GP3\GP3coursework\Debug\GP3coursework.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Jordan Coyle\Documents\GitHub\GP3\GP3coursework\Debug\GP3coursework.lib" /MACHINE:X86 Debug\cCamera.obj
+         Debug\cColours.obj
+         Debug\cFpCamera.obj
+         Debug\cInputMgr.obj
+         Debug\cLight.obj
+         Debug\cModel.obj
+         Debug\cModelLoader.obj
+         Debug\cModelMov.obj
+         Debug\cSound.obj
+         Debug\cSoundMgr.obj
+         Debug\cTexture.obj
+         Debug\cWNDManager.obj
+         Debug\GameConstants.obj
+         Debug\Main.obj
+         Debug\windowOGL.obj
+         DevIL.lib
+         freeglut.lib
+         ftgl.lib
+         ILU.lib
+         Libraries\alut.lib
+         "Libraries\glm-0.3.2Lib.lib"
+         Libraries\ILUT.lib
+         Libraries\OpenAL32.lib
+     1>cModelMov.obj : error LNK2001: unresolved external symbol "float transZ" (?transZ@@3MA)
+     1>C:\Users\Jordan Coyle\Documents\GitHub\GP3\GP3coursework\Debug\GP3coursework.exe : fatal error LNK1120: 1 unresolved externals
      1>Done Building Project "C:\Users\Jordan Coyle\Documents\GitHub\GP3\GP3coursework\GP3coursework\GP3coursework.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:00.08
+Time Elapsed 00:00:01.17

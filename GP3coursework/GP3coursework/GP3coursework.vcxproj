@@ -64,10 +64,48 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Library Include="Libraries\DevIL.lib" />
-    <Library Include="Libraries\freeglut.lib" />
-    <Library Include="Libraries\ftgl.lib" />
-    <Library Include="Libraries\ILU.lib" />
+    <ClCompile Include="cCamera.cpp" />
+    <ClCompile Include="cColours.cpp" />
+    <ClCompile Include="cFpCamera.cpp" />
+    <ClCompile Include="cInputMgr.cpp" />
+    <ClCompile Include="cLight.cpp" />
+    <ClCompile Include="cModel.cpp" />
+    <ClCompile Include="cModelLoader.cpp" />
+    <ClCompile Include="cModelMov.cpp" />
+    <ClCompile Include="cSound.cpp" />
+    <ClCompile Include="cSoundMgr.cpp" />
+    <ClCompile Include="cTexture.cpp" />
+    <ClCompile Include="cWNDManager.cpp" />
+    <ClCompile Include="GameConstants.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="windowOGL.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cCamera.h" />
+    <ClInclude Include="cColours.h" />
+    <ClInclude Include="cFpCamera.h" />
+    <ClInclude Include="cInputMgr.h" />
+    <ClInclude Include="cLight.h" />
+    <ClInclude Include="cModel.h" />
+    <ClInclude Include="cModelLoader.h" />
+    <ClInclude Include="cModelMov.h" />
+    <ClInclude Include="cSound.h" />
+    <ClInclude Include="cSoundMgr.h" />
+    <ClInclude Include="cTexture.h" />
+    <ClInclude Include="cWNDManager.h" />
+    <ClInclude Include="GameConstants.h" />
+    <ClInclude Include="wglext.h" />
+    <ClInclude Include="windowOGL.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="DevIL.lib" />
+    <Library Include="freeglut.lib" />
+    <Library Include="ftgl.lib" />
+    <Library Include="ILU.lib" />
+    <Library Include="Libraries\alut.lib" />
+    <Library Include="Libraries\glm-0.3.2Lib.lib" />
+    <Library Include="Libraries\ILUT.lib" />
+    <Library Include="Libraries\OpenAL32.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
