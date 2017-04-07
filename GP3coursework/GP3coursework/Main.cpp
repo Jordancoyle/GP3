@@ -73,7 +73,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	cCamera fpCamera;
 	fpCamera.setTheCameraPos(glm::vec3(0.0f, 0.0f, 75.0f));
 	fpCamera.setTheCameraLookAt(glm::vec3(0.0f, 0.0f, 0.0f));
-	fpCamera.setTheCameraUpVector(glm::vec3(0.0f, 1.0f, 0.0f)); // pointing upwards in world space
+	fpCamera.setTheCameraUpVector(glm::vec3(0.0f, 1.0f, 0.0f)); 
 	fpCamera.setTheCameraAspectRatio(windowWidth, windowHeight);
 	fpCamera.setTheProjectionMatrix(45.0f, fpCamera.getTheCameraAspectRatio(), 0.1f, 20000.0f);
 	fpCamera.update();
@@ -82,7 +82,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	cCamera tdCamera;
 	tdCamera.setTheCameraPos(glm::vec3(00.0f, 75.0f, 75.0f));
 	tdCamera.setTheCameraLookAt(glm::vec3(0.0f, 0.0f, 0.0f));
-	tdCamera.setTheCameraUpVector(glm::vec3(0.0f, 1.0f, 0.0f)); // pointing upwards in world space
+	tdCamera.setTheCameraUpVector(glm::vec3(0.0f, 1.0f, 0.0f)); 
 	tdCamera.setTheCameraAspectRatio(windowWidth, windowHeight);
 	tdCamera.setTheProjectionMatrix(45.0f, tdCamera.getTheCameraAspectRatio(), 0.1f, 300.0f);
 	tdCamera.update();
@@ -95,20 +95,20 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, g_Ambient);
 
 	//cTexture testTexture;
-	//testTexture.createManTexture("Models/earth/earth.jpg");
+	//testTexture.createTexture("Models/earth/earth.jpg");
 
 	cModelLoader barrelMdl;
 	barrelMdl.loadModel("Models/barrels_obj/barrels_obj.obj");
 
-	cModelLoader test1;
-	test1.loadModel("Models/earth/earth.obj");
+	cModelLoader enemyMdl;
+	enemyMdl.loadModel("Models/earth/earth.obj");
 
-	cModelLoader landscapeMdl;
-	landscapeMdl.loadModel("Models/Mount/mountains.obj");
+	cModelLoader guyMdl;
+	guyMdl.loadModel("Models/Guy/Chris_RE6.obj");
 
 	cModelMov ModelMov;
-	ModelMov.initialise(glm::vec3(0, 0, 0), 0.0f, glm::vec3(1, 1, 1), glm::vec3(0, 0, 0), 5.0f, true);
-	ModelMov.setMdlDimensions(landscapeMdl.getModelDimensions());
+	ModelMov.initialise(glm::vec3(0, 0, 0), 0.0f, glm::vec3(5, 5, 5), glm::vec3(0, 0, 0), 5.0f, true);
+	ModelMov.setMdlDimensions(guyMdl.getModelDimensions());
 	ModelMov.attachInputMgr(theInputMgr);
 
 	theSoundMgr->getSnd("Theme")->playAudio(AL_LOOPING);
@@ -151,6 +151,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
 
 		glMatrixMode(GL_MODELVIEW);
 		glLoadIdentity();
+
 		if (cameraCheck)
 		{
 			glLoadMatrixf((GLfloat*)&fpCamera.getTheViewMatrix());
@@ -162,8 +163,8 @@ int WINAPI WinMain(HINSTANCE hInstance,
 
 
 		barrelMdl.renderMdl((glm::vec3(0.0f, 40.0f, 0.0f)), 0.0f, (glm::vec3(5.0f, 5.0f, 5.0f)));
-		test1.renderMdl((glm::vec3(0.0f, 90.0f, 20.0f)), 0.0f, (glm::vec3(10.0f, 10.0f, 10.0f)));
-		landscapeMdl.renderMdl(ModelMov.getPosition(), ModelMov.getRotation(), ModelMov.getScale());
+		enemyMdl.renderMdl((glm::vec3(0.0f, 90.0f, 20.0f)), 0.0f, (glm::vec3(10.0f, 10.0f, 10.0f)));
+		guyMdl.renderMdl(ModelMov.getPosition(), ModelMov.getRotation(), ModelMov.getScale());
 		ModelMov.update(elapsedTime);
 
 		sunLight.lightOn();
